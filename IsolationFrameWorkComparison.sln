@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsolationFrameWorkComparison", "IsolationFrameWorkComparison\IsolationFrameWorkComparison.csproj", "{2587A790-696C-4B85-B168-29C87294A419}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsolationFrameWorkComparison.NSubstitute.Tests", "IsolationFrameWorkComparison.NSubstitute.Tests\IsolationFrameWorkComparison.NSubstitute.Tests.csproj", "{537B89EA-1BEB-4852-8125-44FF309EE9B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2587A790-696C-4B85-B168-29C87294A419}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2587A790-696C-4B85-B168-29C87294A419}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2587A790-696C-4B85-B168-29C87294A419}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2587A790-696C-4B85-B168-29C87294A419}.Release|Any CPU.Build.0 = Release|Any CPU
+		{537B89EA-1BEB-4852-8125-44FF309EE9B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{537B89EA-1BEB-4852-8125-44FF309EE9B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{537B89EA-1BEB-4852-8125-44FF309EE9B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{537B89EA-1BEB-4852-8125-44FF309EE9B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,13 @@
+/Users/street/RiderProjects/IsolationFrameWorkComparison/IsolationFrameWorkComparison.NSubstitute.Tests/bin/Debug/netstandard2.0/NUnit3.TestAdapter.dll
+/Users/street/RiderProjects/IsolationFrameWorkComparison/IsolationFrameWorkComparison.NSubstitute.Tests/bin/Debug/netstandard2.0/NUnit3.TestAdapter.pdb
+/Users/street/RiderProjects/IsolationFrameWorkComparison/IsolationFrameWorkComparison.NSubstitute.Tests/bin/Debug/netstandard2.0/nunit.engine.dll
+/Users/street/RiderProjects/IsolationFrameWorkComparison/IsolationFrameWorkComparison.NSubstitute.Tests/bin/Debug/netstandard2.0/nunit.engine.api.dll
+/Users/street/RiderProjects/IsolationFrameWorkComparison/IsolationFrameWorkComparison.NSubstitute.Tests/bin/Debug/netstandard2.0/IsolationFrameWorkComparison.NSubstitute.Tests.deps.json
+/Users/street/RiderProjects/IsolationFrameWorkComparison/IsolationFrameWorkComparison.NSubstitute.Tests/bin/Debug/netstandard2.0/IsolationFrameWorkComparison.NSubstitute.Tests.dll
+/Users/street/RiderProjects/IsolationFrameWorkComparison/IsolationFrameWorkComparison.NSubstitute.Tests/bin/Debug/netstandard2.0/IsolationFrameWorkComparison.NSubstitute.Tests.pdb
+/Users/street/RiderProjects/IsolationFrameWorkComparison/IsolationFrameWorkComparison.NSubstitute.Tests/obj/Debug/netstandard2.0/IsolationFrameWorkComparison.NSubstitute.Tests.csprojAssemblyReference.cache
+/Users/street/RiderProjects/IsolationFrameWorkComparison/IsolationFrameWorkComparison.NSubstitute.Tests/obj/Debug/netstandard2.0/IsolationFrameWorkComparison.NSubstitute.Tests.csproj.CoreCompileInputs.cache
+/Users/street/RiderProjects/IsolationFrameWorkComparison/IsolationFrameWorkComparison.NSubstitute.Tests/obj/Debug/netstandard2.0/IsolationFrameWorkComparison.NSubstitute.Tests.AssemblyInfoInputs.cache
+/Users/street/RiderProjects/IsolationFrameWorkComparison/IsolationFrameWorkComparison.NSubstitute.Tests/obj/Debug/netstandard2.0/IsolationFrameWorkComparison.NSubstitute.Tests.AssemblyInfo.cs
+/Users/street/RiderProjects/IsolationFrameWorkComparison/IsolationFrameWorkComparison.NSubstitute.Tests/obj/Debug/netstandard2.0/IsolationFrameWorkComparison.NSubstitute.Tests.dll
+/Users/street/RiderProjects/IsolationFrameWorkComparison/IsolationFrameWorkComparison.NSubstitute.Tests/obj/Debug/netstandard2.0/IsolationFrameWorkComparison.NSubstitute.Tests.pdb
