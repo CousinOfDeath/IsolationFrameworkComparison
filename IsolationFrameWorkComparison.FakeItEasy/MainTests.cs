@@ -1,13 +1,11 @@
 ﻿using System;
+using FakeItEasy;
 using IsolationFrameWorkComparison.ExternalDependencies;
-using IsolationFrameWorkComparison.Interfaces;
 using IsolationFrameWorkComparison.Models;
-using NSubstitute;
-using NSubstitute.ReturnsExtensions;
 using NUnit.Framework;
 
-namespace IsolationFrameWorkComparison.NSubstitute.Tests
-{    
+namespace IsolationFrameWorkComparison.FakeItEasy
+{
     [TestFixture]
     public class MainTests
     {
@@ -19,9 +17,9 @@ namespace IsolationFrameWorkComparison.NSubstitute.Tests
         [SetUp]
         public void Setup()
         {
-            loggerFake = Substitute.For<IsolationFrameWorkComparison.ExternalDependencies.ILogger>();
-            notificationServiceFake = Substitute.For<INotificationService>();
-            businessRepositoryFake = Substitute.For<IBusinessRepository>();
+            loggerFake = A.Fake<IsolationFrameWorkComparison.ExternalDependencies.ILogger>();
+            notificationServiceFake = A.Fake<INotificationService>();
+            businessRepositoryFake = A.Fake<IBusinessRepository>();
             
             main = new Main(loggerFake, notificationServiceFake, businessRepositoryFake);
         }
@@ -49,7 +47,7 @@ namespace IsolationFrameWorkComparison.NSubstitute.Tests
             this.main.HandleBusiness(localBusiness);
 
             // Assert
-            this.businessRepositoryFake.Received().AddBusiness(localBusiness);
+            A.CallTo(() => this.businessRepositoryFake.AddBusiness(localBusiness)).MustHaveHappenedOnceExactly();
         }
         
         [Test]
@@ -62,14 +60,14 @@ namespace IsolationFrameWorkComparison.NSubstitute.Tests
             this.main.HandleBusiness(localBusiness);
 
             // Assert
-            this.loggerFake.Received().Log(Arg.Is<string>(s => s.StartsWith("Handled business for")));
+            A.CallTo(() => this.loggerFake.Log(A<string>.That.Contains("Handled business for"))).MustHaveHappenedOnceExactly();
         }
 
         [Test]
         public void IsBusinessGood_BusinessDoesNotExist_ThrowsUnauthorizedAccessException()
         {
             // Arrange
-            businessRepositoryFake.GetBusiness(Arg.Any<Guid>()).ReturnsNull();
+            A.CallTo(() => businessRepositoryFake.GetBusiness(A<Guid>.Ignored)).Returns(null);
             
             // Act
             var exception = Assert.Throws<UnauthorizedAccessException>(()=>  this.main.IsBusinessGood(Guid.NewGuid()));
@@ -82,13 +80,13 @@ namespace IsolationFrameWorkComparison.NSubstitute.Tests
         public void IsBusinessGood_BusinessDoesNotExist_CallsNotificationServiceNotify()
         {
             // Arrange
-            businessRepositoryFake.GetBusiness(Arg.Any<Guid>()).ReturnsNull();
+            A.CallTo(() => businessRepositoryFake.GetBusiness(A<Guid>.Ignored)).Returns(null);
             
             // Act
             var exception = Assert.Throws<UnauthorizedAccessException>(()=>  this.main.IsBusinessGood(Guid.NewGuid()));
 
             // Assert
-            this.notificationServiceFake.Received().Notify(Arg.Any<Uri>(), "Could not find business");
+            A.CallTo(() => this.notificationServiceFake.Notify(A<Uri>.Ignored, A<string>.That.Contains("Could not find business"))).MustHaveHappenedOnceExactly();
         }
         
         [TestCase(0)]
@@ -102,7 +100,7 @@ namespace IsolationFrameWorkComparison.NSubstitute.Tests
             // Arrange
             var localBusiness = MakeLocalBusiness(years);
             
-            businessRepositoryFake.GetBusiness(Arg.Any<Guid>()).Returns(localBusiness);
+            A.CallTo(() => businessRepositoryFake.GetBusiness(A<Guid>.Ignored)).Returns(localBusiness);
             
             // Act
             var result = this.main.IsBusinessGood(Guid.NewGuid());
@@ -118,7 +116,7 @@ namespace IsolationFrameWorkComparison.NSubstitute.Tests
             // Arrange
             var localBusiness = MakeLocalBusiness(years);
             
-            businessRepositoryFake.GetBusiness(Arg.Any<Guid>()).Returns(localBusiness);
+            A.CallTo(() => businessRepositoryFake.GetBusiness(A<Guid>.Ignored)).Returns(localBusiness);
             
             // Act
             var result = this.main.IsBusinessGood(Guid.NewGuid());
@@ -126,7 +124,7 @@ namespace IsolationFrameWorkComparison.NSubstitute.Tests
             // Assert
             Assert.IsTrue(result);
         }
-
+        
         private static LocalBusiness MakeLocalBusiness(int years)
         {
             return new LocalBusiness
@@ -136,5 +134,6 @@ namespace IsolationFrameWorkComparison.NSubstitute.Tests
                 Est = DateTime.UtcNow.AddYears(years)
             };
         }
+        
     }
 }
