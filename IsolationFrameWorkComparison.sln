@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsolationFrameWorkCompariso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsolationFrameWorkComparison.NSubstitute.Tests", "IsolationFrameWorkComparison.NSubstitute.Tests\IsolationFrameWorkComparison.NSubstitute.Tests.csproj", "{537B89EA-1BEB-4852-8125-44FF309EE9B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsolationFrameWorkComparison.FakeItEasy", "IsolationFrameWorkComparison.FakeItEasy\IsolationFrameWorkComparison.FakeItEasy.csproj", "{04CFC744-2484-4FCA-975E-54535BA37B29}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsolationFrameWorkComparison.FakeItEasy.Tests", "IsolationFrameWorkComparison.FakeItEasy.Tests\IsolationFrameWorkComparison.FakeItEasy.Tests.csproj", "{04CFC744-2484-4FCA-975E-54535BA37B29}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
