@@ -36,6 +36,32 @@ namespace IsolationFrameWorkComparison.FakeItEasy
             // Assert
             StringAssert.Contains("can't set established date in the future", exception.Message);
         }
+        
+        [Test]
+        public void HandleBusiness_BusinessWithEstInFuture_DoesNotAddBusinessToRepository()
+        {
+            // Arrange
+            var localBusiness = MakeLocalBusiness(1);
+
+            // Act
+            var exception = Assert.Throws<Exception>(() => this.main.HandleBusiness(localBusiness));
+
+            // Assert
+            A.CallTo(() => this.businessRepositoryFake.AddBusiness(localBusiness)).MustNotHaveHappened();
+        }
+        
+        [Test]
+        public void HandleBusiness_BusinessWithEstInFuture_DoesNotWiteLog()
+        {
+            // Arrange
+            var localBusiness = MakeLocalBusiness(1);
+
+            // Act
+            var exception = Assert.Throws<Exception>(() => this.main.HandleBusiness(localBusiness));
+
+            // Assert
+            A.CallTo(() => this.loggerFake.Log(A<string>.That.Contains("Handled business for"))).MustNotHaveHappened();
+        }
 
         [Test]
         public void HandleBusiness_ValidBusiness_CallsBusinessRepositoryAddBusiness()
