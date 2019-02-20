@@ -6,4 +6,4 @@ The Isolation Frameworks experimented are
 
 1. NSubstitute
 2. FakeItEasy
-3. MOQ (Not done yet)
+3. MOQ
