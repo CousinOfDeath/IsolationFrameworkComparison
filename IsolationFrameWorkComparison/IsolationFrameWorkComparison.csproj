@@ -2,6 +2,11 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp2.0</TargetFramework>
+        <CodeAnalysisRuleSet>..\.sonarlint\cousinofdeath_isolationframeworkcomparisoncsharp.ruleset</CodeAnalysisRuleSet>
     </PropertyGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="..\.sonarlint\cousinofdeath_isolationframeworkcomparison\CSharp\SonarLint.xml" Link="SonarLint.xml" />
+    </ItemGroup>
 
 </Project>

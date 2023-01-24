@@ -274,3 +274,5 @@ IsolationFrameWorkComparison/obj/
 IsolationFrameWorkComparison\.NSubstitute\.Tests/obj/
 
 IsolationFrameWorkComparison\.NSubstitute\.Tests/bin/Debug/netcoreapp2\.0/IsolationFrameWorkComparison\.NSubstitute\.Tests\.dll
+
+.sonarlint/
